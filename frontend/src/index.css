@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TechStore Design System - Electronics Ecommerce Theme
+All colors MUST be HSL for perfect theming.
+*/
+
+@layer base {
+  :root {
+    /* Base Colors - Clean tech aesthetic */
+    --background: 0 0% 100%;
+    --foreground: 224 20% 15%;
+
+    /* Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 224 20% 15%;
+    --surface: 220 15% 98%;
+    --surface-foreground: 224 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 20% 15%;
+
+    /* Brand Colors - Modern Tech Blue */
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 221 83% 48%;
+    --primary-subtle: 221 50% 96%;
+
+    /* Secondary - Professional Gray */
+    --secondary: 220 13% 95%;
+    --secondary-foreground: 224 15% 25%;
+    --secondary-hover: 220 13% 90%;
+
+    /* Neutral Tones */
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 13% 95%;
+    --accent-foreground: 224 15% 25%;
+
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI Elements */
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+
+    /* Design Tokens */
+    --radius: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-sm: 0.5rem;
+
+    /* Gradients - Modern Tech */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(221 83% 58%));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(208 90% 56%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--surface)) 100%);
+
+    /* Shadows - Professional Depth */
+    --shadow-sm: 0 1px 2px 0 hsl(220 20% 20% / 0.05);
+    --shadow: 0 4px 6px -1px hsl(220 20% 20% / 0.1), 0 2px 4px -1px hsl(220 20% 20% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 20% 20% / 0.1), 0 4px 6px -2px hsl(220 20% 20% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 20% 20% / 0.1), 0 10px 10px -5px hsl(220 20% 20% / 0.04);
+
+    /* Animations */
+    --animate-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --animate-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar */
+    --sidebar-background: hsl(var(--surface));
+    --sidebar-foreground: hsl(var(--muted-foreground));
+    --sidebar-primary: hsl(var(--primary));
+    --sidebar-primary-foreground: hsl(var(--primary-foreground));
+    --sidebar-accent: hsl(var(--accent));
+    --sidebar-accent-foreground: hsl(var(--accent-foreground));
+    --sidebar-border: hsl(var(--border));
+    --sidebar-ring: hsl(var(--ring));
+  }
+
+  .dark {
+    /* Dark Mode - Premium Tech Feel */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+    --surface: 224 15% 6%;
+
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 213 31% 91%;
+
+    --primary: 221 83% 58%;
+    --primary-foreground: 224 71% 4%;
+    --primary-hover: 221 83% 63%;
+
+    --secondary: 215 28% 17%;
+    --secondary-foreground: 213 31% 91%;
+
+    --muted: 215 28% 17%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+
+    --accent: 215 28% 17%;
+    --accent-foreground: 213 31% 91%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 213 31% 91%;
+
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 221 83% 58%;
+    
+    --sidebar-background: 224 15% 6%;
+    --sidebar-foreground: 217.9 10.6% 64.9%;
+    --sidebar-primary: 221 83% 58%;
+    --sidebar-primary-foreground: 224 71% 4%;
+    --sidebar-accent: 215 28% 17%;
+    --sidebar-accent-foreground: 213 31% 91%;
+    --sidebar-border: 215 28% 17%;
+    --sidebar-ring: 221 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground));
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary));
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Product Card Hover Effects */
+  .product-card {
+    transition: var(--animate-smooth);
+  }
+  .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  /* Glass Effect */
+  .glass-effect {
+    background: hsl(var(--background) / 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.5);
+  }
+}
