@@ -1,0 +1,10 @@
+shimmy>=2.0
+stable-baselines3[extra]
+gym
+pandas
+scikit-learn
+joblib
+fastapi
+uvicorn
+nest_asyncio
+pyngrok

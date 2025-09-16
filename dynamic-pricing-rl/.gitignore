@@ -1,0 +1,50 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# =========================
+# Virtual Environments
+# =========================
+venv/
+env/
+.venv/
+pricing-rl/
+
+# =========================
+# Data (ignored)
+# =========================
+# data/*.csv
+# !data/.gitkeep        # keep empty folder tracked if needed
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# OS Generated
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs & Checkpoints
+# =========================
+logs/
+logs_pricing/
+wandb/
+tensorboard/
+
+# =========================
+# FastAPI / Ngrok
+# =========================
+*.db
+*.sqlite3
+ngrok.log
