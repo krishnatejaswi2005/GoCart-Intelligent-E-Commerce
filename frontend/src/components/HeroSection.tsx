@@ -106,17 +106,6 @@ const HeroSection = () => {
 						</div>
 
 						{/* Floating Elements */}
-						<div className="absolute -top-6 -left-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
-							<div className="flex items-center space-x-2 text-white">
-								<div className="h-8 w-8 bg-success rounded-full flex items-center justify-center">
-									<Zap className="h-4 w-4 text-white" />
-								</div>
-								<div>
-									<p className="text-sm font-medium">Best Seller</p>
-									<p className="text-xs text-blue-100">iPhone 15 Pro</p>
-								</div>
-							</div>
-						</div>
 
 						<div className="absolute -bottom-6 -right-6 bg-white/10 backdrop-blur-md rounded-xl p-4 border border-white/20">
 							<div className="text-white text-center">
